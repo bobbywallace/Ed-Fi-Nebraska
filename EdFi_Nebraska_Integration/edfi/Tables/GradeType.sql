@@ -1,0 +1,14 @@
+﻿CREATE TABLE [edfi].[GradeType] (
+    [GradeTypeId] INT            IDENTITY (1, 1) NOT NULL,
+    [CodeValue]   NVARCHAR (20)  NOT NULL,
+    [Description] NVARCHAR (200) NOT NULL,
+    CONSTRAINT [PKGradeTypeType] PRIMARY KEY NONCLUSTERED ([GradeTypeId] ASC) WITH (DATA_COMPRESSION = PAGE),
+    CONSTRAINT [UIGradeTypeTypeCodeValue] UNIQUE NONCLUSTERED ([CodeValue] ASC) WITH (DATA_COMPRESSION = PAGE)
+)
+WITH (DATA_COMPRESSION = PAGE);
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_GradeTypeCodeValue]
+    ON [edfi].[GradeType]([CodeValue] ASC) WITH (DATA_COMPRESSION = PAGE);
+
