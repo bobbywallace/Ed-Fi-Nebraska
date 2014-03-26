@@ -117,6 +117,10 @@
     <Folder Include="util\Functions\" />
     <Folder Include="util\Stored Procedures\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Security\Users" />
+    <Folder Include="Security\Roles" />
+    <Folder Include="Security\Roles\Database Roles" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="edfi\Tables\ReasonNotTestedType.sql">
@@ -1256,9 +1260,6 @@
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
     <Build Include="Storage\ExceptionFG1.sql" />
-    <Build Include="Security\edfiLoader.sql" />
-    <Build Include="Security\tsdsLoader.sql" />
-    <Build Include="Security\RoleMemberships.sql" />
     <Build Include="util\Functions\Split.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
@@ -1295,8 +1296,12 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Security\edfi.sql" />
-    <Build Include="Security\util.sql" />
-    <Build Include="Security\Permissions.sql" />
+    <Build Include="Security\Schemas\edfi.sql" />
+    <Build Include="Security\Schemas\util.sql" />
+    <Build Include="Security\Users\edfiLoader.sql" />
+    <Build Include="Security\Users\tsdsLoader.sql" />
+    <Build Include="Security\Roles\Database Roles\db_ddladmin.sql" />
+    <Build Include="Security\Roles\Database Roles\db_datareader.sql" />
+    <Build Include="Security\Roles\Database Roles\db_datawriter.sql" />
   </ItemGroup>
 </Project>
